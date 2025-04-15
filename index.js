@@ -17,7 +17,9 @@ anything = {};
 let some;
 some = "Text";
 let str;
-str = some;
+if (typeof some === "string") {
+    str = some;
+}
 //* 4
 let person = ["Max", 21];
 //* 5
@@ -38,7 +40,7 @@ const intervalId = setInterval(() => {
     console.log("State - ", page.currentState);
     if (i !== 0)
         clearInterval(intervalId);
-}, 5000);
+}, 1000);
 //* 6
 let numOrStr = "String currently";
 numOrStr = 21;

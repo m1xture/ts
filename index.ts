@@ -23,7 +23,9 @@ let some: unknown;
 some = "Text";
 
 let str: string;
-str = some as string;
+if (typeof some === "string") {
+  str = some;
+}
 
 //* 4
 
@@ -48,7 +50,7 @@ setTimeout(() => {
 const intervalId = setInterval(() => {
   console.log("State - ", page.currentState);
   if (i !== 0) clearInterval(intervalId);
-}, 5000);
+}, 1000);
 
 //* 6
 
