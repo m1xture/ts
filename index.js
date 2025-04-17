@@ -9,6 +9,7 @@ let notInitialize = undefined;
 let callback = (a) => {
     return 100 + a;
 };
+console.log(username, age);
 //* #2
 let anything = -20;
 anything = "Text";
@@ -43,7 +44,9 @@ const intervalId = setInterval(() => {
 }, 1000);
 //* 6
 let numOrStr = "String currently";
+console.log("numOrStr", numOrStr);
 numOrStr = 21;
+console.log("numOrStr", numOrStr);
 const switcher = "disabled";
 //* 8
 function showMessage(message) {
@@ -53,7 +56,15 @@ function calc(num1, num2) {
     return num1 + num2;
 }
 function customError() {
-    throw new Error("Error");
+    throw new Error("Synthetic error (^^ゞ");
+}
+showMessage("Hello world! (with typescript)");
+console.log(calc(5, 4));
+try {
+    customError();
+}
+catch (err) {
+    console.log(err);
 }
 const page1 = {
     title: "The awesome page",
@@ -71,3 +82,5 @@ const page2 = {
     accounts: ["Alex"],
     status: "close",
 };
+console.log("page1", page1);
+console.log("page2", page2);

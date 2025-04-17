@@ -10,6 +10,7 @@ let notInitialize: undefined = undefined;
 let callback = (a: number): number => {
   return 100 + a;
 };
+console.log(username, age);
 //* #2
 
 let anything: any = -20;
@@ -55,7 +56,9 @@ const intervalId = setInterval(() => {
 //* 6
 
 let numOrStr: number | string = "String currently";
+console.log("numOrStr", numOrStr);
 numOrStr = 21;
+console.log("numOrStr", numOrStr);
 
 //* 7
 
@@ -73,7 +76,16 @@ function calc(num1: number, num2: number): number {
 }
 
 function customError(): never {
-  throw new Error("Error");
+  throw new Error("Synthetic error (^^ゞ");
+}
+
+showMessage("Hello world! (with typescript)");
+console.log(calc(5, 4));
+
+try {
+  customError();
+} catch (err) {
+  console.log(err);
 }
 
 //* 9
@@ -103,3 +115,6 @@ const page2: Page = {
   accounts: ["Alex"],
   status: "close",
 };
+
+console.log("page1", page1);
+console.log("page2", page2);
